@@ -1,0 +1,349 @@
+{
+  "key": "group_5dd5b9e9748c8",
+  "title": "Block: Not\u00edcias",
+  "fields": [
+    {
+      "key": "field_5dc49ac8b87d3",
+      "label": "Conte\u00fado",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_5dba1dcb058b7",
+      "label": "Mat\u00e9ria",
+      "name": "postObject",
+      "type": "post_object",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "post_type": ["post"],
+      "taxonomy": "",
+      "allow_null": 1,
+      "multiple": 0,
+      "return_format": "object",
+      "ui": 1
+    },
+    {
+      "key": "field_5dc49997b87d1",
+      "label": "Mostrar imagem?",
+      "name": "hasImage",
+      "type": "true_false",
+      "instructions": "Exibe ou n\u00e3o a imagem do post?",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "Sim",
+      "ui_off_text": "N\u00e3o"
+    },
+    {
+      "key": "field_5dc49997b88d2",
+      "label": "Sobrescrever?",
+      "name": "overwrite",
+      "type": "true_false",
+      "instructions": "Alterar campos da mat\u00e9ria?",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "Sim",
+      "ui_off_text": "N\u00e3o"
+    },
+    {
+      "key": "field_5dba1b2190536",
+      "label": "Chap\u00e9u",
+      "name": "hat",
+      "type": "text",
+      "instructions": "Sobrescreva o chap\u00e9u da mat\u00e9ria se necess\u00e1rio",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_5dc49997b88d2", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Chap\u00e9u",
+      "prepend": "",
+      "append": "",
+      "maxlength": 60
+    },
+    {
+      "key": "field_5dba1ae190535",
+      "label": "T\u00edtulo",
+      "name": "title",
+      "type": "text",
+      "instructions": "Sobrescreva o t\u00edtulo da mat\u00e9ria se necess\u00e1rio",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_5dc49997b88d2", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "T\u00edtulo",
+      "prepend": "",
+      "append": "",
+      "maxlength": 200
+    },
+    {
+      "key": "field_5dba1cdc90538",
+      "label": "Link",
+      "name": "link",
+      "type": "url",
+      "instructions": "Sobrescreva o link da mat\u00e9ria se necess\u00e1rio",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_5dc49997b88d2", "operator": "==", "value": "1" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "Link"
+    },
+    {
+      "key": "field_5dba1c8c90537",
+      "label": "Imagem",
+      "name": "image",
+      "type": "image",
+      "instructions": "Sobrescreva a imagem da mat\u00e9ria se necess\u00e1rio",
+      "required": 0,
+      "conditional_logic": [
+        [
+          { "field": "field_5dc49997b88d2", "operator": "==", "value": "1" },
+          { "field": "field_5dc49997b87d1", "operator": "==", "value": "1" }
+        ]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "return_format": "url",
+      "preview_size": "medium",
+      "library": "all",
+      "min_width": 1024,
+      "min_height": 800,
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "jpg,jpeg,png,webp"
+    },
+    {
+      "key": "field_5dc49b1bb87d4",
+      "label": "Apar\u00eancia",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_5dbb7b3a9c42d",
+      "label": "Layout do Card",
+      "name": "layout",
+      "type": "select",
+      "instructions": "Informe o layout do card de not\u00edcia",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "choices": {
+        "vertical": "Vertical",
+        "horizontal": "Horizontal",
+        "highlight": "Destaque"
+      },
+      "default_value": ["vertical-top"],
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 1,
+      "ajax": 0,
+      "return_format": "value",
+      "placeholder": ""
+    },
+    {
+      "key": "field_5dc49998c78f1",
+      "label": "Inverter Imagem/Título?",
+      "name": "inverted",
+      "type": "true_false",
+      "instructions": "Inverte a ordem da Imagem com o Título",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "Sim",
+      "ui_off_text": "N\u00e3o"
+    },
+    {
+      "key": "field_5dbb7b3b0d43f",
+      "label": "Formato do Conteúdo",
+      "name": "format",
+      "type": "select",
+      "instructions": "Informe o formato do conteúdo apresentado",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "choices": {
+        "default": "Padrão",
+        "story": "Story",
+        "gallery": "Galeria",
+        "video": "Vídeo"
+      },
+      "default_value": ["default"],
+      "allow_null": 0,
+      "multiple": 0,
+      "ui": 1,
+      "ajax": 0,
+      "return_format": "value",
+      "placeholder": ""
+    },
+    {
+      "key": "field_5dd5bf9f3ace3",
+      "label": "Tamanho do Card",
+      "name": "size",
+      "type": "button_group",
+      "instructions": "Defina o tamanho do card (Usado na fonte de t\u00edtulo e mobile)",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "choices": {
+        "giga": "XG",
+        "mega": "GG",
+        "large": "G",
+        "medium": "M",
+        "small": "P"
+      },
+      "allow_null": 0,
+      "default_value": "medium",
+      "layout": "horizontal",
+      "return_format": "value"
+    },
+    {
+      "key": "field_5dc49997b87a0",
+      "label": "Caixa branca?",
+      "name": "boxed",
+      "type": "true_false",
+      "instructions": "Coloca o card em caixa branca",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "Sim",
+      "ui_off_text": "N\u00e3o"
+    },
+    {
+      "key": "field_5dc49a36b87d2",
+      "label": "Patrocinado?",
+      "name": "sponsored",
+      "type": "button_group",
+      "instructions": "Marque se for um conte\u00fado pago",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "choices": {
+        "none": "N\u00e3o",
+        "sponsored": "Especial Patrocinado",
+        "advertising": "Especial Publicit\u00e1rio"
+      },
+      "allow_null": 0,
+      "default_value": "none",
+      "layout": "vertical",
+      "return_format": "value"
+    },
+    {
+      "key": "field_5de6baf7a06bc",
+      "label": "Nome do Patrocinador",
+      "name": "sponsor",
+      "type": "text",
+      "instructions": "Nome do patrocinador/anunciante",
+      "required": 0,
+      "conditional_logic": [
+        [{ "field": "field_5dc49a36b87d2", "operator": "!=", "value": "none" }]
+      ],
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_5dc49b600a27f",
+      "label": "Mais",
+      "name": "",
+      "type": "tab",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "placement": "top",
+      "endpoint": 0
+    },
+    {
+      "key": "field_5dc09c012472b",
+      "label": "Relacionadas",
+      "name": "relateds",
+      "type": "repeater",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "collapsed": "field_5dc09c282472c",
+      "min": 0,
+      "max": 4,
+      "layout": "block",
+      "button_label": "Adicionar relacionada",
+      "sub_fields": [
+        {
+          "key": "field_5dc09c282472c",
+          "label": "T\u00edtulo",
+          "name": "title",
+          "type": "text",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": "T\u00edtulo",
+          "prepend": "",
+          "append": "",
+          "maxlength": ""
+        },
+        {
+          "key": "field_5dc09c962472d",
+          "label": "Link",
+          "name": "link",
+          "type": "url",
+          "instructions": "",
+          "required": 1,
+          "conditional_logic": 0,
+          "wrapper": { "width": "", "class": "", "id": "" },
+          "default_value": "",
+          "placeholder": ""
+        }
+      ]
+    }
+  ],
+  "location": [
+    [{ "param": "block", "operator": "==", "value": "morpheus/cardnews" }]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 0
+}

@@ -1,0 +1,32 @@
+{
+  "key": "group_579bace43d547",
+  "title": "Mat\u00e9ria - Observa\u00e7\u00e3o",
+  "fields": [
+    {
+      "key": "field_579bad01b751b",
+      "label": "Observa\u00e7\u00f5es",
+      "name": "observacoes",
+      "type": "textarea",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "default_value": "",
+      "placeholder": "",
+      "maxlength": "",
+      "rows": 4,
+      "new_lines": "",
+      "readonly": 0,
+      "disabled": 0
+    }
+  ],
+  "location": [[{ "param": "post_type", "operator": "==", "value": "post" }]],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": 1,
+  "description": ""
+}

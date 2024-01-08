@@ -1,0 +1,53 @@
+:root {
+  --morpheus-block-blogs--columns: 1;
+}
+
+.editor-styles-wrapper {
+  .wp-block-morpheus-blogs {
+    &__container {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    &__title {
+      position: relative;
+      margin-top: 0;
+      margin-bottom: 40px;
+      color: #2b2b2b;
+      font-size: 1.375rem;
+      font-family: Chakra Petch, sans-serif;
+      font-weight: 700;
+      line-height: 125%;
+      letter-spacing: 0;
+      text-align: center;
+      span {
+        border-top: 4px solid #2b2b2b;
+        display: inline-block;
+        font-weight: 700;
+        padding-top: 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+    }
+    &__items {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: repeat(2, 1fr);
+      padding-bottom: 3rem;
+    }
+    &__item {
+      margin-top: 0;
+      min-height: 350px;
+    }
+    .block-editor-inner-blocks {
+      > .block-editor-block-list__layout {
+        display: grid;
+        gap: 1.5rem;
+        grid-template-columns: repeat(2, 1fr);
+        padding-bottom: 3rem;
+        > .wp-block {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

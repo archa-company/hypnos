@@ -1,0 +1,88 @@
+.section-text-color {
+	color: var(--section-color) !important;
+}
+.section-border-color {
+	border-color: var(--section-color) !important;
+}
+.section-bg-color {
+	background-color: var(--section-color) !important;
+}
+
+.news-card {
+	min-height: 300px;
+	background-color: #ccc;
+}
+
+.display-4 {
+	font-family: $font-two;
+	font-size: 1.5625rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.btn {
+	&.btn-transparent {
+		border: none;
+		background-color: transparent;
+	}
+	&.btn-action {
+		cursor: pointer;
+		display: flex;
+		height: 51px;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		background-color: $white;
+		color: #268c1e;
+		font-family: $font-two;
+		font-weight: bold;
+		font-size: .875rem;
+	}
+}
+
+svg {
+	.social-facebook .bg-oval {
+		fill: $social-facebook;
+	}
+	.social-twitter .bg-oval {
+		fill: $social-twitter;
+	}
+	.social-instagram .bg-oval {
+		fill: $social-instagram;
+	}
+	.social-youtube .bg-oval {
+		fill: $social-youtube;
+	}
+	.social-linkedin .bg-oval {
+		fill: $social-linkedin;
+	}
+	.social-pinterest .bg-oval {
+		fill: $social-pinterest;
+	}
+	.social-whatsapp .bg-oval {
+		fill: $social-whatsapp;
+	}
+	.social-share .bg-oval {
+		fill: $social-share;
+	}
+}
+
+main#app {
+	h1, h2, h3, h4, h5, h6 {
+		font-family: $font-two;
+		font-weight: bold;
+		line-height: 1;
+		margin-bottom: 1rem;
+		color: $content-titles-color;
+	}
+}
+
+.mini-terms {
+	margin: 1rem 0;
+	line-height: 1.2;
+	font-size: 1rem;
+	@media (min-width: 768px) {
+		font-size: .9375rem;
+	}
+}

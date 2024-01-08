@@ -1,0 +1,33 @@
+{
+  "key": "group_9767ece4e80f16",
+  "title": "Créditos (Autores)",
+  "fields": [
+    {
+      "key": "field_923fdfc067e01",
+      "label": "Adicionar um autor ou agência",
+      "name": "credits",
+      "type": "taxonomy",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "taxonomy": "credit",
+      "field_type": "multi_select",
+      "allow_null": 0,
+      "add_term": 0,
+      "save_terms": 1,
+      "load_terms": 1,
+      "return_format": "object",
+      "multiple": 0
+    }
+  ],
+  "location": [[{ "param": "post_type", "operator": "==", "value": "post" }]],
+  "menu_order": 1,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["credits"],
+  "active": true,
+  "description": ""
+}

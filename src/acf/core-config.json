@@ -1,0 +1,1201 @@
+{
+  "key": "group_63fb4c06aa13d",
+  "title": "Morpheus: Configurações",
+  "fields": [
+    {
+      "key": "field_63fb6313ef42f",
+      "label": "Configurações",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 1,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb6717ef439",
+      "label": "Hermes",
+      "name": "hermes_enable",
+      "type": "true_false",
+      "instructions": "Ativar eventos de exportação de dados",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "25",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb679def43a",
+      "label": "Analytics",
+      "name": "analytics_enable",
+      "type": "true_false",
+      "instructions": "Ativar trackers e analytics",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "25",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb639fef431",
+      "label": "Ads",
+      "name": "ads_enable",
+      "type": "true_false",
+      "instructions": "Mostrar publicidade do Google Ad Manager",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "25",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb7564ea909",
+      "label": "LGPD",
+      "name": "lgpd_enable",
+      "type": "true_false",
+      "instructions": "Configurações da PrivacyTools",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "25",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_642cb7fb848f8",
+      "label": "Site ID",
+      "name": "domain_id",
+      "type": "text",
+      "instructions": "Utilizado para organizar os JSON no S3",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "gazetadopovo",
+      "prepend": "",
+      "append": "",
+      "maxlength": 30
+    },
+    {
+      "key": "field_63fb636cef430",
+      "label": "Domínio oficial",
+      "name": "domain_oficial",
+      "type": "text",
+      "instructions": "Utilizado para replace das URLs entre outros",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "75",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "www.site.com.br",
+      "prepend": "",
+      "append": "",
+      "maxlength": 100
+    },
+    {
+      "key": "field_63fb636cff431",
+      "label": "Protocolo HTTPS",
+      "name": "domain_https",
+      "type": "true_false",
+      "instructions": "O domínio oficil tem HTTPS?",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "25",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb79a4263d6",
+      "label": "Recursos",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb7673d51f2",
+      "label": "Editor de Home",
+      "name": "features_home_editor",
+      "type": "true_false",
+      "instructions": "Ativar Editor de Homes no WordPress com Gutenberg",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb7722e1c4a",
+      "label": "WebStories",
+      "name": "features_web_stories",
+      "type": "true_false",
+      "instructions": "Ativar geração de estáticos para os WebStories",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb77551d4e0",
+      "label": "Limpeza do banco de dados",
+      "name": "features_db_cleaning",
+      "type": "true_false",
+      "instructions": "Ativar a remoção automática do banco de dados",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 0,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_63fb6068ef425",
+      "label": "Hermes",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_63fb6717ef439",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb722667382",
+      "label": "EventBridge: Nome do EventBus",
+      "name": "hermes_eventbus",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "business_unit-cms-prd",
+      "prepend": "",
+      "append": "",
+      "maxlength": 30
+    },
+    {
+      "key": "field_63fb6097ef426",
+      "label": "S3: Bucket",
+      "name": "hermes_s3_bucket",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "hermes",
+      "placeholder": "hermes",
+      "prepend": "",
+      "append": "",
+      "maxlength": 30
+    },
+    {
+      "key": "field_63fb6134ef429",
+      "label": "S3: Base Path",
+      "name": "hermes_s3_base_path",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "json",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb60d8ef427",
+      "label": "ElasticSearch: Endpoint",
+      "name": "hermes_elasticsearch_endpoint",
+      "type": "text",
+      "instructions": "Endpoint do OpenSearch Service da AWS (com o https://)",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "70",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "nome-do-cluster-xxxxxxxxxxxxxxxxxxxx.us-east-1.es.amazonaws.com",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb6104ef930",
+      "label": "Index com Prefixo?",
+      "name": "hermes_elasticsearch_prefix",
+      "type": "true_false",
+      "instructions": "Site ID como prefixo nos index",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "30",
+        "class": "",
+        "id": ""
+      },
+      "message": "",
+      "default_value": 1,
+      "ui": 1,
+      "ui_on_text": "",
+      "ui_off_text": ""
+    },
+    {
+      "key": "field_642cdf312a5ac",
+      "label": "ElasticSearch: Username",
+      "name": "hermes_elasticsearch_user",
+      "type": "text",
+      "instructions": "Somente caso o Elasticsearch tenha autenticação por usuário e senha",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "username",
+      "prepend": "",
+      "append": "",
+      "maxlength": 50
+    },
+    {
+      "key": "field_642cdf992a5ad",
+      "label": "ElasticSearch: Password",
+      "name": "hermes_elasticsearch_pass",
+      "type": "password",
+      "instructions": "Somente caso o Elasticsearch tenha autenticação por usuário e senha",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "placeholder": "password",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_63fb61a7ef42a",
+      "label": "Analytics",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_63fb679def43a",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb627aef42d",
+      "label": "Gazeta do Povo Tracker: Site ID",
+      "name": "analytics_gp_tracker_id",
+      "type": "text",
+      "instructions": "É o slug do site para identificação nos relatórios da diretoria",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": 50
+    },
+    {
+      "key": "field_63fb61bfef42b",
+      "label": "Google Analytics 4: Measurement ID",
+      "name": "analytics_ga4_id",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "G-XXXXXXXX",
+      "prepend": "",
+      "append": "",
+      "maxlength": 20
+    },
+    {
+      "key": "field_63fb6200ef42c",
+      "label": "Google Analytics 4: Measurement ID (Unidade de negócio)",
+      "name": "analytics_ga4_business_id",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "G-XXXXXXXX",
+      "prepend": "",
+      "append": "",
+      "maxlength": 20
+    },
+    {
+      "key": "field_63fb6981f6ccc",
+      "label": "Google TagManager: GTM ID",
+      "name": "analytics_gtm_id",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "GTM-XXXXXX",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb62b8ef42e",
+      "label": "Google Analytics 3: UA ID (Descontinuado)",
+      "name": "analytics_ga3_id",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "UA-XXXXXXXX-X",
+      "prepend": "",
+      "append": "",
+      "maxlength": 20
+    },
+    {
+      "key": "field_63fb62b8ef43f",
+      "label": "Netdeal Analytics",
+      "name": "analytics_netdeal_id",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "2022bcfd-2560-4bfe-82b7-9fd97dd96d79",
+      "prepend": "",
+      "append": "",
+      "maxlength": 40
+    },
+    {
+      "key": "field_63fb62b8ef44a",
+      "label": "Cxense Analytics: Site ID",
+      "name": "analytics_cxense_id",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "1138596144857280557",
+      "prepend": "",
+      "append": "",
+      "maxlength": 30
+    },
+    {
+      "key": "field_63fb640def432",
+      "label": "Ads",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_63fb639fef431",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb65acef436",
+      "label": "Account Unit",
+      "name": "ads_account_unit",
+      "type": "number",
+      "instructions": "Número da conta do Google Ad Manager",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": 7601,
+      "placeholder": 7601,
+      "prepend": "",
+      "append": "",
+      "min": "",
+      "max": "",
+      "step": ""
+    },
+    {
+      "key": "field_63fb65f2ef437",
+      "label": "Site Unit",
+      "name": "ads_site_unit",
+      "type": "text",
+      "instructions": "Slug do site - Primeiro nível de ad_unit após o ID da conta GAM",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "tribuna_pr",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb6482ef433",
+      "label": "URL do script de publicidade",
+      "name": "ads_script_url",
+      "type": "url",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "60",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "https://www.tribunapr.com.br/resources/ads/dist/bundle.js",
+      "placeholder": "https://www.tribunapr.com.br/resources/ads/dist/bundle.js"
+    },
+    {
+      "key": "field_63fb6673ef438",
+      "label": "Seletor das posições de publicidade",
+      "name": "ads_seletor",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "40",
+        "class": "",
+        "id": ""
+      },
+      "default_value": ".ads",
+      "placeholder": ".ads",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb64eaef434",
+      "label": "Mapping: CDN",
+      "name": "ads_mapping_cdn",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "60",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "https://www.tribunapr.com.br/resources/ads",
+      "placeholder": "https://www.tribunapr.com.br/resources/ads",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb6554ef435",
+      "label": "Mapping: File Path",
+      "name": "ads_mapping_file_path",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "40",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "/config/mapping.json",
+      "placeholder": "/config/mapping.json",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    },
+    {
+      "key": "field_63fb6068ef436",
+      "label": "Limpeza do Banco de Dados",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_63fb77551d4e0",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb65acef457",
+      "label": "Tempo de permanência",
+      "name": "cleaning_days",
+      "type": "number",
+      "instructions": "Quandos dias os posts publicados devem pernamecer no banco de dados",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "default_value": 60,
+      "placeholder": 60,
+      "prepend": "",
+      "append": "",
+      "min": "",
+      "max": "",
+      "step": ""
+    },
+    {
+      "key": "field_655e115b75b73",
+      "label": "Push Notification",
+      "name": "",
+      "aria-label": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_655e1506e6259",
+      "label": "Ativado",
+      "name": "push_enable",
+      "aria-label": "",
+      "type": "true_false",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "message": "Deseja ativar e usar esta funcionalidade?",
+      "default_value": 0,
+      "ui_on_text": "Sim",
+      "ui_off_text": "Não",
+      "ui": 1
+    },
+    {
+      "key": "field_655e13b775b7d",
+      "label": "Icone da Mensagem",
+      "name": "push_message_icon",
+      "aria-label": "",
+      "type": "image",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "50",
+        "class": "",
+        "id": ""
+      },
+      "return_format": "url",
+      "library": "all",
+      "min_width": "",
+      "min_height": "",
+      "min_size": "",
+      "max_width": "",
+      "max_height": "",
+      "max_size": "",
+      "mime_types": "",
+      "preview_size": "medium"
+    },
+    {
+      "key": "field_655e123675c89",
+      "label": "URL Tracking",
+      "name": "push_url_tracking",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "Está informação é concatenado ao final dos Links de Push para rastreamento e analytics",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "?utm_source=os-redacao&utm_medium=push&utm_campaign=nome-do-site",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e11a875b74",
+      "label": "Provedor",
+      "name": "push_provider",
+      "aria-label": "",
+      "type": "button_group",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "choices": {
+        "Notix": "Notix",
+        "OneSignal": "OneSignal",
+        "SendPulse": "SendPulse"
+      },
+      "default_value": "Notix",
+      "return_format": "value",
+      "allow_null": 0,
+      "layout": "horizontal"
+    },
+    {
+      "key": "field_655e123675b75",
+      "label": "App ID",
+      "name": "push_notix_app_id",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "Notix"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e128b75b76",
+      "label": "Authentication Token",
+      "name": "push_notix_auth_token",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "Notix"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e12b075b77",
+      "label": "App ID",
+      "name": "push_onesignal_app_id",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "OneSignal"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e12e575b78",
+      "label": "REST Key",
+      "name": "push_onesignal_rest_key",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "OneSignal"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e132e75b79",
+      "label": "Website ID",
+      "name": "push_sendpulse_website_id",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "SendPulse"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e134a75b7a",
+      "label": "Client ID",
+      "name": "push_sendpulse_client_id",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "SendPulse"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e135975b7b",
+      "label": "Client Secret",
+      "name": "push_sendpulse_client_secret",
+      "aria-label": "",
+      "type": "password",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "SendPulse"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_655e138b75b7c",
+      "label": "Script Hash",
+      "name": "push_sendpulse_script_hash",
+      "aria-label": "",
+      "type": "text",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_655e1506e6259",
+            "operator": "==",
+            "value": "1"
+          },
+          {
+            "field": "field_655e11a875b74",
+            "operator": "==",
+            "value": "SendPulse"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "maxlength": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": ""
+    },
+    {
+      "key": "field_63fb6dddb75bc",
+      "label": "LGPD",
+      "name": "",
+      "type": "accordion",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": [
+        [
+          {
+            "field": "field_63fb7564ea909",
+            "operator": "==",
+            "value": "1"
+          }
+        ]
+      ],
+      "wrapper": {
+        "width": "",
+        "class": "",
+        "id": ""
+      },
+      "open": 0,
+      "multi_expand": 0,
+      "endpoint": 0
+    },
+    {
+      "key": "field_63fb6dedb75bd",
+      "label": "Privacy Tools: ID",
+      "name": "lgpd_privacy_tools_id",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "30",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "XxX1010101",
+      "prepend": "",
+      "append": "",
+      "maxlength": 15
+    },
+    {
+      "key": "field_63fb6f91077d2",
+      "label": "AMP - Privacy Tools: ID",
+      "name": "lgpd_privacy_tools_amp_id",
+      "type": "text",
+      "instructions": "",
+      "required": 1,
+      "conditional_logic": 0,
+      "wrapper": {
+        "width": "70",
+        "class": "",
+        "id": ""
+      },
+      "default_value": "",
+      "placeholder": "",
+      "prepend": "",
+      "append": "",
+      "maxlength": ""
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "morpheus"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "seamless",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": ""
+}

@@ -1,0 +1,553 @@
+.home-site
+    main#app
+        max-width: none !important
+        padding-top: 0 !important
+    .post-list
+        margin-top: 2rem
+        .cardnews
+            margin-bottom: 0
+    .last-news
+        margin-top: 2rem
+        margin-left: 0
+        margin-right: 0
+    .sports__lance--lances
+        @media (max-width: $media-sm)
+            display: block
+
+.post-list-destaque
+    background-color: #fff
+    display: flex
+    border-radius: 4px
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06)
+    box-sizing: border-box
+    width: 100%
+    @media (max-width: $media-sm)
+        display: block
+
+    .cardnews--destaque
+        position: relative
+        width: 65%
+        overflow: hidden
+        min-height: 100%
+        margin-bottom: 0
+        border-radius: 0
+        @media (max-width: $media-sm)
+          width: 100%
+          min-height: 360px
+        .cardnews__image
+          position: absolute
+          top: 0
+          left: 0
+          z-index: 1
+          width: 100%
+          height: 100%
+          background-size: cover
+          background-position: top center
+        .cardnews__content
+          position: absolute
+          bottom: 0
+          left: 0
+          z-index: 2
+          padding: 100px 25px 25px 25px !important
+          background: -moz-linear-gradient(bottom, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%)
+          background: -webkit-gradient(left bottom, left top, color-stop(0%, rgba(0,0,0,0.8)), color-stop(100%, rgba(255,255,255,0)))
+          background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%)
+          background: -o-linear-gradient(bottom, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%)
+          background: -ms-linear-gradient(bottom, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%)
+          background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(255,255,255,0) 100%)
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 )
+          .cardnews__title
+              margin: 0 !important
+              color: $white !important
+              font-size: 2.25rem !important
+              line-height: 2.5rem !important
+              font-weight: 400 !important
+          .cardnews__category
+              color: $white !important
+        .gf
+          background: $blue
+          padding: 0 5px
+
+    .cardnews--destaque-list
+        .cardnews--horizontal
+            background: none
+            border: none
+            box-shadow: none
+            .cardnews__image
+                width: 40%
+                background: none
+                img
+                    max-width: 110px
+                    width: 100%
+            .cardnews__content
+                padding: 0 !important
+
+    .cardnews--destaque-list
+        width: 35%
+        padding: 1.25rem
+        @media (max-width: $media-sm)
+            width: 100%
+        .cardnews--horizontal
+            padding-bottom: 15px
+            margin-bottom: 15px
+            border-bottom: 1px solid $border-color
+            border-radius: 0
+            &:last-child
+                margin-bottom: 0
+                padding-bottom: 0
+                border: none
+            .cardnews__title
+                font-size: 0.85rem !important
+                font-weight: normal !important
+                line-height: 1.2rem !important
+                margin: 0 !important
+                .cardnews__title-icon
+                    display: none
+                @media (max-width: $media-xl)
+                    font-size: 0.75rem !important
+                    line-height: 1rem !important
+                @media (max-width: $media-sm)
+                    font-size: 1.1rem !important
+                    line-height: 1.2rem !important
+                    font-weight: 400 !important
+                    .cardnews__title-icon
+                        display: inline-block
+                        width: 10px
+                        height: 10px
+                        background: $blue
+                        margin-right: 0.5rem
+            .cardnews__image
+                padding-right: 15px
+                @media (max-width: $media-sm)
+                    display: none
+
+.card-default
+    display: flex
+    width: 100%
+    background-color: #fff
+    border-radius: 4px
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06)
+    box-sizing: border-box
+    @media (max-width: $media-sm)
+        padding-bottom: 1rem !important
+    .cardnews--vertical
+        flex: 0 0 100% !important
+        background: none
+        border: none
+        box-shadow: none
+        font-size: 1.1rem
+        margin: 0
+        padding: 1rem 1.25rem 0 1.25rem !important
+        .cardnews__content
+            border-bottom: 1px solid $border-color
+            margin: 0 !important
+            padding: 0 0 1.25rem 0 !important
+        .cardnews__title
+            margin-bottom: 0 !important
+            font-size: 1.1rem !important
+            line-height: 1.2rem !important
+            @media (max-width: $media-xl)
+                font-size: 1rem !important
+                line-height: 1.2rem !important
+            @media (max-width: $media-md)
+                font-size: 1.2rem !important
+                line-height: 1.3rem !important
+        .cardnews__title-30
+            font-size: 1.9rem !important
+            line-height: 1.9rem !important
+        .cardnews__title-20
+            font-size: 1.2rem !important
+            line-height: 1.3rem !important
+            @media (max-width: $media-xl)
+                font-size: 1rem !important
+                line-height: 1.2rem !important
+            @media (max-width: $media-md)
+                font-size: 1.2rem !important
+                line-height: 1.3rem !important
+        .cardnews__title-14
+            font-size: 0.85rem !important
+            line-height: 1rem !important
+        .cardnews__meta
+            margin-top: 1rem
+        .cardnews__excerpt-quote
+            font-family: $font-primary !important
+            line-height: 1.1rem !important
+        &:last-of-type
+            .cardnews__content
+                border-bottom: none
+                padding: 0 !important
+
+    .card-default__title
+        font-family: $font-primary
+        font-size: 1.3rem
+        font-weight: bold
+        color: $dark
+        margin-bottom: 0 !important
+        border-bottom: 1px solid $border-color
+        padding: 0.75rem 1.25rem
+        display: flex
+        align-items: center
+        width: 100%
+        @media (max-width: $media-xl)
+            font-size: 1rem !important
+        @media (max-width: $media-md)
+            font-size: 1.3rem !important
+            line-height: 1.4rem !important
+    .lottery-categories
+        width: 100%
+        margin: 0 1.25rem
+        ul.lottery-categories--type
+            margin-top: 10px
+            li
+                border: none !important
+                padding: 10px 0 0 0
+    .pagination__lazyload
+        margin: 1.5rem auto 0.75rem auto
+        padding: 0
+
+    .cardnews--horizontal
+        border-bottom: 1px solid $border-color
+        border-radius: 0
+        box-shadow: none
+        margin: 1rem 1.25rem 0 1.25rem
+        padding-bottom: 1rem
+        @media (max-width: $media-sm)
+            display: flex
+            align-items: center
+        &:last-of-type
+            padding-bottom: 0
+            border: none
+            @media (max-width: $media-md)
+                padding-bottom: 1.25rem
+            @media (max-width: $media-sm)
+                padding-bottom: 0
+        .cardnews__image
+            width: 38%
+            flex: 0 0 38%
+            background: none
+            img
+                @media (max-width: $media-sm)
+                    height: auto
+                    border-radius: 0
+        .cardnews__content
+            padding: 0 0 0 0.5rem
+            @media (max-width: $media-sm)
+                padding: 0 0 0 1rem !important
+            .cardnews__title
+                font-size: 1rem !important
+                line-height: 1.2rem !important
+                font-weight: normal !important
+                margin-bottom: 0 !important
+
+.post-list-destaque-live
+    background: none
+    display: flex
+    border-radius: 0px
+    box-shadow: none
+    width: 100%
+    @media (max-width: $media-sm)
+        display: block
+
+    .cardnews--destaque
+        position: relative
+        width: 100%
+        overflow: hidden
+        margin-bottom: 2rem !important
+        @media (max-width: $media-sm)
+            width: 100%
+            min-height: 360px
+            margin-bottom: 0rem !important
+        .cardnews__image
+            position: absolute
+            top: 0
+            left: 0
+            z-index: 1
+            width: 100%
+            height: 100%
+            background-size: cover
+            background-position: top center
+        .cardnews__content
+            position: absolute
+            bottom: 0
+            left: 0
+            right: 0
+            z-index: 2
+            padding: 100px 25px 25px 25px !important
+            background: -moz-linear-gradient(bottom, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%)
+            background: -webkit-gradient(left bottom, left top, color-stop(0%, rgba(0,0,0,0.9)), color-stop(100%, rgba(255,255,255,0)))
+            background: -webkit-linear-gradient(bottom, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%)
+            background: -o-linear-gradient(bottom, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%)
+            background: -ms-linear-gradient(bottom, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%)
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(255,255,255,0) 100%)
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#ffffff', GradientType=0 )
+            .cardnews__title
+                margin: 0 !important
+                color: $white !important
+                font-size: 2.25rem !important
+                line-height: 2.5rem !important
+                font-weight: 400 !important
+                width: 70%
+                @media (max-width: $media-xl)
+                    width: 90%
+                @media (max-width: $media-sm)
+                    width: 100%
+                    font-size: 1.9rem !important
+                    line-height: 2.1rem !important
+            .cardnews__category
+                display: flex
+                background: $red
+                color: $white !important
+                margin-left: -25px
+                padding: 0.25rem 0.75rem 0.25rem 25px
+                border-radius: 0 4px 4px 0
+                width: fit-content
+                font-size: 1.1rem
+                align-items: center
+                svg, img
+                    margin-right: 0.5rem
+
+.post-destaque-full-live
+    padding: 0 !important
+    .cardnews--vertical
+        display: flex !important
+        flex-wrap: wrap !important
+        justify-content: right !important
+        align-items: center
+        width: 100% !important
+        background: $blue-dark
+        padding: 0 !important
+        @media (max-width: $media-md)
+            display: flex !important
+            flex-wrap: wrap !important
+            justify-content: right !important
+            align-items: center
+            width: 100% !important
+            flex: 0 0 100% !important
+        @media (max-width: $media-sm)
+            position: relative
+            border-radius: 0
+        .cardnews__image
+            flex: 0 0 30%
+            width: 30%
+            @media (max-width: $media-xl)
+                flex: 0 0 25%
+                width: 25%
+            @media (max-width: $media-sm)
+                flex: 0 0 100%
+            img
+                border-radius: 0 !important
+                max-width: 100%
+        .cardnews__category
+            display: flex
+            background: $red
+            color: $white !important
+            height: 100%
+            padding: 0 1rem
+            border-radius: 0
+            width: fit-content
+            font-size: 1.1rem
+            align-items: center
+            @media (max-width: $media-md)
+                font-size: 0.85rem
+            @media (max-width: $media-sm)
+                position: absolute
+                top: 65%
+                left: 0
+                height: auto
+                padding: 0.25rem 1rem
+                border-radius: 0 4px 4px 0
+            svg, img
+                margin-right: 0.5rem
+        .cardnews__title
+            flex: 0 0 60%
+            margin: 0 !important
+            font-size: 2.25rem !important
+            line-height: 2.4rem !important
+            color: $white !important
+            padding-left: 2.5rem
+            font-weight: 400 !important
+            @media (max-width: $media-xl)
+                font-size: 1.9rem !important
+                line-height: 2.1rem !important
+                padding-left: 2rem
+            @media (max-width: $media-md)
+                font-size: 1.4rem !important
+                line-height: 1.6rem !important
+                padding-left: 1.5rem
+                flex: 0 0 55%
+            @media (max-width: $media-sm)
+                flex: 0 0 100%
+                font-size: 1.1rem !important
+                line-height: 1.3rem !important
+                padding: 1.25rem
+
+.post-list-destaque-text
+    background-color: #fff
+    border-radius: 4px
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06)
+    box-sizing: border-box
+    width: 100%
+    align-items: center
+    padding-bottom: 0 !important
+    @media (max-width: $media-sm)
+        display: block
+    .cardnews--horizontal
+        margin: 1.25rem 1.25rem 0 1.25rem !important
+        padding-bottom: 1rem !important
+        border-bottom: 1px solid $border-color
+        &:last-of-type
+            border-bottom: 1px solid $border-color
+        .cardnews__content
+            @media (max-width: $media-sm)
+                padding: 0 !important
+            .cardnews__title
+                font-size: 1.8rem !important
+                font-weight: bold !important
+                line-height: 2.0rem !important
+                @media (max-width: $media-xl)
+                    font-size: 1.4rem !important
+                    font-weight: bold !important
+                    line-height: 1.6rem !important
+
+    .cardnews--destaque-list
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-between
+        padding: 1rem 1.25rem 0.5rem 1.25rem
+        .cardnews--horizontal
+            border: none
+            border-radius: 0
+            margin: 0 !important
+            margin-bottom: 1.25rem !important
+            padding-bottom: 0 !important
+            flex: 0 0 48%
+            @media (max-width: $media-sm)
+                flex: 0 0 100%
+            .cardnews__content
+                @media (max-width: $media-sm)
+                    padding: 0 !important
+                .cardnews__title
+                    font-size: 0.85rem !important
+                    font-weight: normal !important
+                    line-height: 1.1rem !important
+                    margin: 0 !important
+                    display: flex
+                    @media (max-width: $media-sm)
+                        font-size: 1rem !important
+                        line-height: 1.2rem !important
+                        font-weight: 400 !important
+                        .cardnews__title-icon
+                            display: inline-block
+                            width: 10px
+                            height: 10px
+                            background: $blue
+                            margin-right: 0.5rem
+                            flex: 0 0 10px
+                .cardnews__title-icon
+                    display: inline-block
+                    width: 8px
+                    height: 8px
+                    background: $blue
+                    margin-right: 0.75rem
+                    margin-top: 0.35rem
+                    flex: 0 0 8px
+
+.card-video
+    background: $blue-dark
+    .card-default__title
+        border-color: $blue-light
+        color: $white !important
+        font-weight: 400 !important
+    .cardnews--horizontal
+        border-bottom: 1px solid $blue-light
+        background: none
+        border-radius: 0
+        box-shadow: none
+        margin: 1.25rem 1.25rem 0 1.25rem
+        padding-bottom: 1.25rem
+        &:last-of-type
+            padding-bottom: 0
+            border: none
+        .cardnews__image
+            width: 35%
+            flex: 0 0 35%
+            background: none
+        .cardnews__content
+            padding: 0 0 0 0.75rem
+            .cardnews__title
+                font-size: 1.1rem !important
+                line-height: 1.3rem !important
+                font-weight: 400 !important
+                margin-bottom: 0 !important
+                color: $white !important
+    .btn-action
+        border: 1px solid $white
+        background: none
+        color: $white
+        font-size: 0.85rem
+        height: 45px
+        margin: 2rem auto 0 auto
+        width: 85%
+        border-radius: 4px
+        @media (max-width: $media-md)
+            margin-bottom: 1.25rem
+        @media (max-width: $media-sm)
+            margin-bottom: 0
+.section__title
+    font-family: $font-primary !important
+    font-weight: bold
+    display: flex
+    align-items: center
+    margin-bottom: 0 !important
+    margin-top: 2rem !important
+    span
+        margin-right: 10px
+
+.section__destaque
+    font-family: $font-primary !important
+    font-size: 2.8rem !important
+    line-height: 2.9rem !important
+    font-weight: 400 !important
+    display: flex
+    align-items: center
+    margin-bottom: 0 !important
+    margin-top: 2rem !important
+    @media (max-width: $media-xl)
+        font-size: 2.4rem !important
+    @media (max-width: $media-md)
+        font-size: 1.7rem !important
+    @media (max-width: $media-sm)
+        display: none
+    span
+        padding: 20px 3px
+        margin-right: 15px
+
+.post-small
+    .cardnews--vertical
+        .cardnews__content
+            padding: 0.65rem 0.5rem !important
+            .cardnews__title
+                margin-bottom: 0rem !important
+            .cardnews__meta
+                margin-top: 0.65rem !important
+.col-md-12
+    .post-small
+        .cardnews--vertical
+            @media (max-width: $media-md)
+                flex: 0 0 24.05% !important
+            @media (max-width: $media-sm)
+                flex: 0 0 48.1% !important
+.col-md-7
+    .post-small
+        .cardnews--vertical
+            @media (max-width: $media-md)
+                flex: 0 0 48.1% !important
+
+.lottery-inner, .card-horoscope
+    padding-bottom: 0.5rem !important
+
+.col-md-12
+    .post-destaque-full
+        .cardnews--vertical
+            flex: 0 0 100% !important
+            width: 100%

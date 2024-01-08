@@ -1,0 +1,53 @@
+:root {
+	--section-color: #0162fb;
+}
+
+@at-root {
+  @-ms-viewport { width: device-width; } // stylelint-disable-line at-rule-no-vendor-prefix
+}
+
+@keyframes animation-skeleton {
+	from {
+		border-color: #eee;
+		background-color:#eee;
+	}
+	to {
+		border-color: #ccc;
+		background-color:#ccc;
+	}
+}
+
+* {
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+html, body {
+	padding-bottom: 0 !important; // Prevent padding interstitial ad banner
+	font-family: $font-primary;
+	font-size: 14px;
+	@media (min-width: $media-md) {
+		font-size: 16px;
+	}
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.skeleton {
+	background-color: #ccc;
+	animation: 0.8s linear infinite alternate animation-skeleton;
+}

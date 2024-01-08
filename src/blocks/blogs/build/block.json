@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "morpheus/blogs",
+  "version": "1.0.0",
+  "title": "Morpheus Blogs",
+  "category": "morpheus",
+  "icon": "smiley",
+  "description": "Card com uma lista de posts dos Blogs",
+  "supports": {
+    "anchor": true,
+    "html": false,
+    "align": [
+      "wide",
+      "full"
+    ]
+  },
+  "textdomain": "morpheus",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "limit": {
+      "type": "number"
+    },
+    "columns": {
+      "type": "number"
+    },
+    "title": {
+      "type": "string"
+    },
+    "titleTextColor": {
+      "type": "string"
+    },
+    "titleBorderColor": {
+      "type": "string"
+    },
+    "backgroundColor": {
+      "type": "string"
+    },
+    "align": {
+      "type": "string"
+    }
+  }
+}

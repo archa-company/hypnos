@@ -1,0 +1,18 @@
+@import 'bs-variables';
+@import 'colors';
+
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+$font-primary: 'Montserrat', sans-serif;
+$font-chakra: 'Chakra Petch', sans-serif;
+
+$media-xxl: 1360px;
+$media-xl: map-get($grid-breakpoints, 'xl');
+$media-lg: map-get($grid-breakpoints, 'lg');
+$media-md: map-get($grid-breakpoints, 'md');
+$media-sm: map-get($grid-breakpoints, 'sm');
+$media-xs: map-get($grid-breakpoints, 'xs');
+
+$card-border-radius: 1rem; // 8px
+$mobile-gutter: 8px;
+$mobile-margin-bottom: 1rem;

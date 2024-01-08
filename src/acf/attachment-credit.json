@@ -1,0 +1,15 @@
+{
+  "key": "morpheus_acf_image_metadata",
+  "title": "Imagem Metadata",
+  "fields": [
+    {
+      "key": "morpheus_acf_image_credit",
+      "label": "Crédito",
+      "name": "image_credit",
+      "type": "text",
+      "instructions": "Crédito da Imagem"
+    }
+  ],
+  "location": [[{ "param": "attachment", "operator": "==", "value": "image" }]],
+  "description": "Image Metadata"
+}

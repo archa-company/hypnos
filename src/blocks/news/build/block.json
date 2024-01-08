@@ -1,0 +1,79 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "morpheus/news",
+  "version": "1.0.0",
+  "title": "Notícia",
+  "category": "morpheus",
+  "icon": "superhero",
+  "description": "Card de notícia padrão",
+  "supports": {
+    "anchor": true,
+    "html": false,
+    "align": false
+  },
+  "textdomain": "morpheus",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "id": {
+      "type": "number"
+    },
+    "hat": {
+      "type": "string",
+      "default": ""
+    },
+    "title": {
+      "type": "string",
+      "default": ""
+    },
+    "link": {
+      "type": "string",
+      "default": ""
+    },
+    "image": {
+      "type": "string",
+      "default": ""
+    },
+    "imagePosX": {
+      "type": "number",
+      "default": 0.5
+    },
+    "imagePosY": {
+      "type": "number",
+      "default": 0.5
+    },
+    "overwrite": {
+      "type": "boolean",
+      "default": false
+    },
+    "layout": {
+      "type": "string"
+    },
+    "format": {
+      "type": "string"
+    },
+    "hasImage": {
+      "type": "boolean"
+    },
+    "inverted": {
+      "type": "boolean"
+    },
+    "size": {
+      "type": "string"
+    },
+    "titleBgGray": {
+      "type": "boolean"
+    },
+    "boxed": {
+      "type": "boolean"
+    },
+    "sponsored": {
+      "type": "boolean"
+    },
+    "sponsor": {
+      "type": "string"
+    }
+  }
+}

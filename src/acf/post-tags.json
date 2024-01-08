@@ -1,0 +1,33 @@
+{
+  "key": "group_9767ece4e8000",
+  "title": "Tags",
+  "fields": [
+    {
+      "key": "field_923fdfc067e00",
+      "label": "Adicionar uma tag",
+      "name": "tags",
+      "type": "taxonomy",
+      "instructions": "",
+      "required": 0,
+      "conditional_logic": 0,
+      "wrapper": { "width": "", "class": "", "id": "" },
+      "taxonomy": "post_tag",
+      "field_type": "multi_select",
+      "allow_null": 0,
+      "add_term": 0,
+      "save_terms": 1,
+      "load_terms": 1,
+      "return_format": "object",
+      "multiple": 0
+    }
+  ],
+  "location": [[{ "param": "post_type", "operator": "==", "value": "post" }]],
+  "menu_order": 2,
+  "position": "side",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": ["tags"],
+  "active": true,
+  "description": ""
+}

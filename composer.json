@@ -1,0 +1,43 @@
+{
+  "name": "morpheus/hypnos",
+  "description": "Core do morpheus",
+  "keywords": [
+    "cms8x",
+    "hypnos",
+    "wordpress",
+    "morpheus-project"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Giovanni de Luca",
+      "email": "giovanni@nordica.digital",
+      "homepage": "https://nordica.digital/"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Morpheus\\": "src/"
+    },
+    "files": [
+      "src/helpers.php"
+    ]
+  },
+  "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    }
+  ],
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "require": {
+    "aws/aws-sdk-php": "^3.260"
+  }
+}

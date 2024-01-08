@@ -1,0 +1,24 @@
+{
+  "name": "morpheus-block-news",
+  "version": "1.0.0",
+  "description": "Morpheus Block - News",
+  "author": "Giovanni de Luca",
+  "license": "MIT",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "wp-scripts build --webpack-copy-php",
+    "format": "wp-scripts format",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "packages-update": "wp-scripts packages-update",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "start": "wp-scripts start --webpack-copy-php"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^26.5.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.2",
+    "use-debounce": "^9.0.4"
+  }
+}

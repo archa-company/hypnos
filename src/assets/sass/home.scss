@@ -1,0 +1,14 @@
+#main-home {
+  @import 'base';
+  @import 'blocks';
+
+  // @import 'components/wp-block-styles';
+  @import 'blocks/cardhome';
+  @import 'components/home';
+  // @import 'components/footer';
+  // @import 'components/main-menu';
+
+  * + .wp-block-columns {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,145 @@
+@import 'variables'
+@import 'mixins'
+
+.wp-block-columns
+    @extend .container
+    padding-left: 0
+    padding-right: 0
+    @media (min-width: $media-xl)
+        &.large
+            max-width: 1140px !important
+    @media (max-width: $media-md)
+        padding-left: $mobile-gutter
+        padding-right: $mobile-gutter
+        .wp-block-columns
+            padding-left: 0
+            padding-right: 0
+
+    .wp-block-column
+        @media (min-width: 600px)
+            flex-basis: calc(50% - 8px)
+            &:nth-child(2n)
+                margin-left: 16px
+        @media (min-width: 782px)
+            &:not(:first-child)
+                margin-left: 16px
+
+.wp-block-cover
+    .wp-block-cover__inner-container
+        @extend .container
+        padding-left: 0
+        padding-right: 0
+
+.wp-block-columns
+    margin-bottom: 0
+    &.are-vertically-aligned-stretch
+        align-items: inherit
+.wp-block-column
+    &.is-vertically-aligned-stretch
+        display: flex
+        justify-self: stretch
+        align-self: inherit
+    @media (max-width: $media-md)
+        .card-section-title, .section__title
+            margin-left: 0 !important
+            margin-right: 0 !important
+
+.card-section-title,
+.section__title
+    font-family: $font-chakra
+    position: relative
+    display: flex
+    justify-content: center
+    margin-bottom: 22px !important
+    font-weight: 800 !important
+    font-style: normal
+    font-size: 1.375rem !important
+    color: $white !important
+    padding-left: 0 !important
+    padding-right: 0 !important
+    @media (max-width: $media-md)
+        padding-left: $mobile-gutter
+        padding-right: $mobile-gutter
+    span
+        position: relative
+        display: inline-block
+        color: black
+        padding-top: 12px
+        text-transform: uppercase
+        border-top: 3px solid black
+        text-decoration: none
+        margin-bottom: 30px
+    &.card-section-title--editorial-sport
+        span
+            background-color: $orange !important
+    &.card-section-title--editorial-pop
+        span
+            background-color: $purple !important
+    &.card-section-title--editorial-blog
+        span
+            background-color: $green !important
+    &.card-section-title--editorial-blog
+        span
+            background-color: $green !important
+    &.card-section-title--editorial-cacadores
+        span
+            background-color: $red !important
+    &.card-section-title--editorial-white
+        span
+            background-color: $white !important
+            color: #000 !important
+
+.cardblogs
+    padding: 0
+    .section__title
+        margin-bottom: 1rem !important
+        span
+            display: inline-block
+            background-color: $green !important
+            svg
+                fill: $green !important
+    .cardhome
+        .cardhome__image
+            background-color: transparent
+            img
+                display: block
+                width: 90px
+                height: 90px
+                margin: 1rem auto 0
+                border-radius: 50%
+        .cardhome__content
+            .cardhome__category
+                margin-bottom: 1rem
+                color: #aaa
+                text-align: center
+                span
+                    color: $green !important
+                    font-size: 1rem
+    &.is-admin
+        .cardblogs__placeholder
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: white
+            height: 200px
+            border: 1px solid $green
+            border-radius: 4px
+            text-transform: uppercase
+            color: $green
+
+.cardads, .ads-header
+    flex: 1
+    &.is-admin
+        height: 122px
+        background-color: white
+        border: 1px solid #ccc
+        border-radius: 5px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-transform: uppercase
+        color: #aaa
+        &.cardads--arroba
+            height: 250px !important
+        &.cardads--meia-pagina
+            height: 600px !important

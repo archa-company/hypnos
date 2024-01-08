@@ -1,0 +1,248 @@
+@import '../variables'
+@import '../mixins'
+
+.cardnews
+    background-color: $white
+    display: flex
+    // margin-bottom: 1rem
+    border-radius: 1rem
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.06)
+    border: 1px solid #ddd
+    box-sizing: border-box
+    width: 100%
+    @media (max-width: $media-md)
+        margin-bottom: 0.625rem
+    .cardnews__image
+        @media (max-width: $media-md)
+            img
+                display: block
+                width: 100%
+                max-width: none !important
+                height: 100%
+                object-fit: cover
+    a
+        display: flex
+        flex-direction: column
+        justify-content: center
+        border-radius: 1rem
+        transition: all .3s
+        overflow: hidden
+        &:hover
+            text-decoration: none
+    .cardnews__content
+        flex: 1
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        padding: 1.8125rem
+        .cardnews__category
+            font-size: .875rem
+            font-weight: 400
+            color: $primary
+            margin-bottom: .5rem
+        .cardnews__title
+            font-weight: bold
+            font-size: 1.6rem
+            line-height: 1
+            color: $content-h1-color
+            margin-bottom: 1rem
+            color: $content-titles-color
+            @media (max-width: $media-md)
+                font-size: 1.125rem
+                line-height: 1.22
+                margin-bottom: 1rem
+        .cardnews__excerpt
+            margin-bottom: 1rem
+            font-size: 1rem
+            color: $content-paragraph-color
+            @media (max-width: $media-md)
+                display: none
+        .cardnews__meta
+            position: relative
+            display: flex
+            align-items: center
+            .cardnews__date
+                position: relative
+                margin-right: 35px
+                font-size: .8125rem
+                color: $content-date-color
+                &::after
+                    content: ""
+                    position: absolute
+                    right: -20px
+                    top: 2px
+                    bottom: 2px
+                    width: 1px
+                    background-color: #ccc
+            .cardnews__action
+                +button-flat()
+                margin-right: 1.2rem
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 0.875rem
+                font-weight: bold
+                color: $content-paragraph-color
+                img
+                    margin-right: 4px
+            .cardnews__sharebox
+                position: absolute
+                display: flex
+                top: -14px
+                left: -10px
+                background-color: #fff
+                box-shadow: 0 0 4px rgba(0,0,0,.5)
+                border-radius: 25px
+                padding: 10px 5px 10px 0
+                a
+                    padding: 0 10px !important
+                button.cardnews__sharebox-close
+                    border: 0
+                    border-left: 1px solid #ccc
+                    background-color: transparent
+                    padding: 0 15px !important
+                    cursor: pointer
+                    outline: none
+
+    &.cardnews--horizontal
+        a
+            flex-direction: row
+            @media (max-width: $media-lg)
+                display: flex
+                width: 100%
+                padding: 20px 15px
+            @media(max-width: $media-sm)
+                flex-direction: column
+                padding: 0
+        .cardnews__content
+            @media (max-width: $media-md)
+                flex: 2
+                padding: 0 0 0 1rem
+            @media(max-width: $media-sm)
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                padding: 1.8125rem
+        .cardnews__image
+            background-color: $bg-image-color
+            img
+                max-width: 370px
+                height: 100%
+                object-fit: cover
+            @media (max-width: $media-md)
+                flex: 1
+                background-color: transparent
+                img
+                    // width: 135px
+                    height: auto
+            @media(max-width: $media-sm)
+                img
+                    display: block
+                    width: 100%
+                    max-width: 100%
+        @media (max-width: $media-md)
+            padding: 0
+            .cardnews__category
+                display: none
+            .cardnews__content
+                .cardnews__meta
+                    flex-wrap: wrap
+                    .cardnews__date
+                        flex: 1 1 100%
+                        margin: 0
+                        margin-bottom: .5rem
+                        &::after
+                            content: none
+
+    &:not(.cardnews--horizontal)
+        &.cardnews--no-thumbnail
+            .cardnews__content
+                padding: 1rem 1.25rem
+                .cardnews__category
+                    padding: 1.6rem 1.6rem 0
+                    margin-bottom: -1rem
+                .cardnews__title
+                    padding: 1.6rem
+                    font-size: 1.8rem
+                    line-height: 1.1
+
+    &.cardnews--falecimentos
+        margin-bottom: 1.18rem
+        .cardnews__postlink
+            flex: 1
+            justify-content: space-between
+            padding: 0
+        .cardnews__content
+            padding: 1.2rem 1.8rem
+            .cardnews__title
+                font-size: 1.5625rem
+                line-height: 2rem
+                margin: 0 !important
+                @media(max-width: $media-md)
+                    font-size: 1.125rem
+                    line-height: 1.22
+            .cardnews__excerpt
+                font-size: 1.25rem
+                margin: 0
+                @media(max-width: $media-md)
+                    display: block
+                    font-size: 1rem
+        .cardnews__moreinfos
+            // flex: 1
+            display: flex
+            justify-content: center
+            align-items: center
+            border-left: 1px solid #ccc
+            padding: 0 1.5rem
+            font-weight: 400
+            color: $blue
+            @media(max-width: $media-sm)
+                display: none
+    &.cardnews--edicao_do_dia
+        padding: 20px
+        display: initial
+        &.edicaododia
+            max-width: 500px
+            margin: 0 auto 50px
+            h3
+                display: none
+        h3
+            font-size: 1.2rem
+        .cardnews__image
+            background: none
+            img
+                max-width: 100%
+                height: 100%
+                object-fit: cover
+
+body
+    &.home,
+    &.archive
+        background-color: $blog-archive-bg
+        .post-list
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            gap: .5rem
+            @media(min-width: $media-lg)
+                gap: 1.5rem .5rem
+            @media(max-width: $media-md)
+                margin-left: -15px
+                margin-right: -15px
+            .cardnews
+                &:not(.cardnews--horizontal)
+                    flex: 0 0 48.8%
+                    @media (max-width: $media-md)
+                        flex: 0 0 100%
+                    .cardnews__image
+                        img
+                            max-width: none !important
+                            display: block
+                            width: 100%
+                            height: 100%
+                            object-fit: cover
+    &.edicao_do_dia
+        main#app
+            padding-top: 40px
+        h2.section-title
+            margin: 0 auto 15px
