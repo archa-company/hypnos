@@ -104,10 +104,14 @@ const importer = {
             "taxonomies.category.slug.keyword": category
           }
         });
-        if (!!text) q.query.bool.should = [
-          { match_phrase: { title: text } },
-          { match_phrase: { slug: text } }
-        ];
+        if (!!text) q.query.bool.must = {
+          bool: {
+            should: [
+              { match_phrase: { title: text } },
+              { match_phrase: { slug: text } }
+            ]
+          }
+        };
       };
       const r = await (await fetch(`${importer.elastic.url}/${importer.elastic.index}/_search`, {
         method: 'POST',
