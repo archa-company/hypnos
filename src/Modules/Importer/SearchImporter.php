@@ -65,8 +65,8 @@ class SearchImporter{
 </form>
 <div class="datatable" style="padding-right:20px"><table><tr><th>Data</th><th>Título</th><th>Editoria</th><th>Autor</th><th>Importar</th></tr></table></div>
 <div class="pagination">
- <input type="button" value="&#x21E6;" onclick="search(1)" class="IPMinput">
+ <input type="button" value="&#x21E6;" onclick="previous()" class="IPMinput">
  <select onchange="search(this.value)" class="IPMselect"></select>
- <input type="button" value="&#x21E8;" onclick="search(importer.data.page+1)" class="IPMinput">
+ <input type="button" value="&#x21E8;" onclick="next()" class="IPMinput">
 </div>
 <?php }} ?>
