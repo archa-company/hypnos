@@ -76,39 +76,36 @@ const importer = {
       const q = {
         from: (importer.length * importer.page) - importer.length,
         size: importer.length,
-        sort: [{ updatedAt: { order: 'desc' } }]
+        sort: [{ updatedAt: { order: 'desc' } }],
+        query: {
+          filter: [
+            {
+              term: {
+                type: "post"
+              }
+            }
+          ]
+        }
       }, headers = {
         Accept: 'application/json',
         'Content-Type': 'application/json'
       };
       if (!!importer.elastic.user && !!importer.elastic.pass) headers.Authorization = `Basic ${btoa(`${importer.elastic.user}:${importer.elastic.pass}`)}`;
-      if (!!region || !!category) {
-        q.query = { bool: { must: [] } }
-        if (!!region) q.query.bool.must.push({
-          match: {
+      if (!!region || !!category || !!text) {
+        if (!!region) q.query.bool.filter.push({
+          term: {
             "taxonomies.post_tag.slug.keyword": region
           }
         });
-        if (!!category) q.query.bool.must.push({
-          match: {
+        if (!!category) q.query.bool.filter.push({
+          term: {
             "taxonomies.category.slug.keyword": category
           }
         });
-        if (!!text) q.query.bool.must.push({
-          bool: {
-            should: [
-              { match_phrase: { title: text } },
-              { match_phrase: { slug: text } }
-            ]
-          }
-        });
-      } else if (!!text) q.query = {
-        bool: {
-          should: [
-            { match_phrase: { title: text } },
-            { match_phrase: { slug: text } }
-          ]
-        }
+        if (!!text) q.query.bool.should = [
+          { match_phrase: { title: text } },
+          { match_phrase: { slug: text } }
+        ];
       };
       const r = await (await fetch(`${importer.elastic.url}/${importer.elastic.index}/_search`, {
         method: 'POST',
