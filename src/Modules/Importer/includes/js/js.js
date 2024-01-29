@@ -78,13 +78,15 @@ const importer = {
         size: importer.length,
         sort: [{ updatedAt: { order: 'desc' } }],
         query: {
-          filter: [
-            {
-              term: {
-                type: "post"
+          bool: {
+            filter: [
+              {
+                term: {
+                  type: "post"
+                }
               }
-            }
-          ]
+            ]
+          }
         }
       }, headers = {
         Accept: 'application/json',
