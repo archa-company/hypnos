@@ -2,6 +2,7 @@ const importer = {
   page: 1,
   totalPages: 0,
   data: [],
+  noBreak: false,
   posts: [],
   length: 50,
   s3: {
@@ -213,7 +214,7 @@ const importer = {
   }
 };
 (async () => {
-  importer.setLoadingS(true);
+  importer.noBreak = true;
   importer.posts = [];
   const g = async p => (await (
     await fetch(
@@ -228,3 +229,4 @@ const importer = {
   } while (l.length > 0);
   importer.setLoadingS(false)
 })();
+window.addEventListener('load', () => { if (importer.noBreak) importer.setLoadingS(true) })
