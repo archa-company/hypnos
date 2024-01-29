@@ -129,7 +129,7 @@ const importer = {
             v(x._source.taxonomies?.category),
             v(x._source.taxonomies?.credit)
           ],
-          import: !z.includes(x._source.slug)
+          import: !importer.posts.includes(x._source.slug)
         }));
       importer.setData()
     } catch (e) { console.log(e) }
@@ -213,6 +213,7 @@ const importer = {
   }
 };
 (async () => {
+  importer.setLoadingS(true);
   importer.posts = [];
   const g = async p => (await (
     await fetch(
@@ -224,5 +225,6 @@ const importer = {
   do {
     l = await g(p++);
     if (l.length > 0) importer.posts = importer.posts.concat(l)
-  } while (l.length > 0)
+  } while (l.length > 0);
+  importer.setLoadingS(false)
 })();
