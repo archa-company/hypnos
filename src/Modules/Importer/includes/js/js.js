@@ -231,5 +231,6 @@ const importer = {
     if (l.length > 0) importer.posts = importer.posts.concat(l)
   } while (l.length > 0);
   importer.setLoadingS(false)
+  console.log('concluido')
 })();
-window.addEventListener('load', () => { if (importer.noBreak) importer.setLoadingS(true) })
+// window.addEventListener('load', () => { if (importer.noBreak) importer.setLoadingS(true) })
