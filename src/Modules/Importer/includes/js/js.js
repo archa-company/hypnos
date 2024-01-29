@@ -2,6 +2,7 @@ const importer = {
   page: 1,
   totalPages: 0,
   data: [],
+  posts: [],
   length: 50,
   s3: {
     url: ''
@@ -113,9 +114,6 @@ const importer = {
         body: JSON.stringify(q),
         headers
       })).json(),
-        z = (await (await fetch(`${importer.home}/wp-json/wp/v2/posts/?status=publish`))
-          .json())
-          .map(x => x.slug),
         v = x => !!x && x.length ? x[0].name : '';
       importer.totalPages = Math.ceil(+r.hits.total.value / +importer.length);
       importer.data = r.hits.hits
@@ -185,7 +183,7 @@ const importer = {
     for (let i = 0; i < importer.totalPages; i++) {
       b = document.createElement('option');
       b.value = i + 1;
-      if (i === importer.page-1)
+      if (i === importer.page - 1)
         b.selected = true;
       b.innerHTML = i + 1;
       g.appendChild(b);
@@ -213,4 +211,18 @@ const importer = {
       t[i + 1].getElementsByTagName('td')[4].getElementsByTagName('input')[0].disabled = !c
     }
   }
-}
+};
+(async () => {
+  importer.posts = [];
+  const g = async p => (await (
+    await fetch(
+      `${importer.home}/wp-json/wp/v2/posts/?status=publish&&per_page=100&page=${p}&orderby=slug`
+    ))
+    .json())
+    .map(x => x.slug);
+  let l = [], p = 1;
+  do {
+    l = await g(p++);
+    if (l.length > 0) window.fbgCategories = window.fbgCategories.concat(l)
+  } while (l.length > 0)
+})();
