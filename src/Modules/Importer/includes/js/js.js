@@ -223,6 +223,6 @@ const importer = {
   let l = [], p = 1;
   do {
     l = await g(p++);
-    if (l.length > 0) window.fbgCategories = window.fbgCategories.concat(l)
+    if (l.length > 0) importer.posts = importer.posts.concat(l)
   } while (l.length > 0)
 })();
