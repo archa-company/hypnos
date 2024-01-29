@@ -1,35 +1,34 @@
 @charset "UTF-8";
 /* CSS Document */
 
-.morpheus-sidebar .actions-control {
+.tribuna-sidebar .actions-control {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	gap: 1rem;
 }
 
-.morpheus-sidebar .validate__error {
+.tribuna-sidebar .validate__error {
 	color: #d94f4f !important;
 }
-.morpheus-sidebar .validate__error .components-text-control__input {
+.tribuna-sidebar .validate__error .components-text-control__input {
 	border-color: #d94f4f !important;
 }
 
-.morpheus-sidebar .validate__success {
+.tribuna-sidebar .validate__success {
 	color: #4ab866 !important;
 }
-.morpheus-sidebar .validate__success .components-text-control__input {
+.tribuna-sidebar .validate__success .components-text-control__input {
 	border-color: #4ab866 !important;
 }
 
-.morpheus-sidebar .validate__warning {
+.tribuna-sidebar .validate__warning {
 	color: #f0b849 !important;
 }
-.morpheus-sidebar .validate__warning .components-text-control__input {
+.tribuna-sidebar .validate__warning .components-text-control__input {
 	border-color: #f0b849 !important;
 }
 
-.morpheus-sidebar .schedule-text-control {
+.tribuna-sidebar .schedule-text-control {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 1rem;

@@ -15,7 +15,7 @@ class RegisterConfigPage implements Actionable
             'menu_title'        => 'Morpheus',
             'menu_slug'         => 'morpheus',
             'position'          => 2,
-            'icon_url'          => 'dashicons-games',
+            'icon_url'          => 'dashicons-heart',
             'update_button'     => 'Salvar',
             'updated_message'   => 'Dados atualizados com sucesso!',
             'post_id'           => 'options',

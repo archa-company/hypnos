@@ -14,7 +14,6 @@ class Modules implements ModuleInterface
     public function init(): void
     {
         $this->registerModules();
-        new Blocks;
     }
 
     public function registerModules()

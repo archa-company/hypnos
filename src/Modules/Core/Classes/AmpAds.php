@@ -65,7 +65,7 @@ class AmpAds
         return $result;
     }
 
-    public function template($pos, $label = true, int $width = 300, int $height = 250, string $tag = null, bool $withContainer = true)
+    public function template($pos, $label = true, $width = 300, $height = 250, $tag = null, $withContainer = true)
     {
         $slotId = self::SLOT_ID;
         $slotPrefix = self::SLOT_ID_PREFIX;

@@ -21,9 +21,8 @@ class PostOnSave implements Actionable
          */
         [$postId, $post, $updated] = $params;
 
-        if (!in_array($post->post_type, ['post', 'page'])) return;
         if (!in_array($post->post_status, ['publish'])) return;
-        if (Helper::preventTwiceHook(__CLASS__, $postId, 10, !$updated)) return;
+        if (Helper::preventTwiceHook(__CLASS__, $postId, 10, true)) return;
 
         // Gera o UUID do Post e salva em post_meta
         if (!$updated) TrackerUuid::setFromObject($post);

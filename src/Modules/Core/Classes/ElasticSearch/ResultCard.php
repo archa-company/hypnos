@@ -7,6 +7,8 @@ class ResultCard
     public $id;
     public $site;
     public $hat;
+    public $citySign;
+    public $postLayout;
     public $title;
     public $image;
     public $link;

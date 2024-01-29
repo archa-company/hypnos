@@ -34,7 +34,7 @@ class MorpheusSearch{
   $d['title']=wp_strip_all_tags($d['title']);
   $h=[
    'ID'=>(get_post($d['id'])!==NULL?$d['id']:0),
-   'post_name'=>$d['title'],
+   'post_name'=>$d['slug'],
    'post_title'=>$d['title'],
    'post_content'=>$d['content'],
    'post_status'=>$d['status'],

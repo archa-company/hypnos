@@ -95,16 +95,16 @@ const importer = {
         if (!!text) q.query.bool.must.push({
           bool: {
             should: [
-              { match: { title: text } },
-              { match: { slug: text } }
+              { match_phrase: { title: text } },
+              { match_phrase: { slug: text } }
             ]
           }
         });
       } else if (!!text) q.query = {
         bool: {
           should: [
-            { match: { title: text } },
-            { match: { slug: text } }
+            { match_phrase: { title: text } },
+            { match_phrase: { slug: text } }
           ]
         }
       };
@@ -185,6 +185,8 @@ const importer = {
     for (let i = 0; i < importer.totalPages; i++) {
       b = document.createElement('option');
       b.value = i + 1;
+      if (i === importer.page)
+        b.selected = true;
       b.innerHTML = i + 1;
       g.appendChild(b);
     }
