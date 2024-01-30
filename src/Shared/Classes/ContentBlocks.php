@@ -14,10 +14,12 @@ class ContentBlocks{
     if(preg_match('/<'.$t.'[^>]+>(.+)<\/'.$t.'>/is',$s,$m))
     $r['#text']=$m[1]??null;
     preg_match('/<'.$t.'[^>]*>/i',$s,$m);
-    $n=$m[0];
-    preg_match_all('/\s*([^\s=]+)\s*=\s*[\"\'](.*?)[\"\']/sm',$n,$m);
-    for($i=0;$i<count($m[1]);$i++)
-      $r[$m[1][$i]]=($m[2][$i]??null);
+    if($m){
+      $n=$m[0];
+      preg_match_all('/\s*([^\s=]+)\s*=\s*[\"\'](.*?)[\"\']/sm',$n,$m);
+      for($i=0;$i<count($m[1]);$i++)
+        $r[$m[1][$i]]=($m[2][$i]??null);
+    }
     return $r;
   }
   public static function getAttachmentByUrl($u){
