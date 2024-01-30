@@ -44,22 +44,23 @@ class ContentBlocks{
       preg_match('/^<h(?<size>[1-6]{1})[^>]*>.*<\/h[1-6]{1}>$/',$block->content,$m);
       $a=$this->getAttributes($block->content,'a');
       $block->props=array_merge($block->props,array_filter([
-        'size'=>$m['size'],
-        'href'=>$a['href'],
-        'target'=>$a['target']
+        'size'=>$m['size']??'',
+        'href'=>$a['href']??'',
+        'target'=>$a['target']??''
       ]));
       $block->content=strip_tags($block->content);
     }elseif($block->name==='core/image'){
       $a=$this->getAttributes($block->content,'img');
       $b=$this->getAttributes($block->content,'figcaption');
       $c=$this->getAttributes($block->content,'a');
+      $f=$this->getAttachmentByUrl($a['src']);
       $block->props=array_merge($block->props,array_filter([
-        'source'=>$a['src'],
-        'alt'=>$a['alt'],
-        'credit'=>$this->getAttachmentByUrl($a['src'])['credit'],
-        'caption'=>$b['#text'],
-        'href'=>$c['href'],
-        'target'=>$c['target']
+        'source'=>$a['src']??'',
+        'alt'=>$a['alt']??'',
+        'credit'=>$f['credit']??'',
+        'caption'=>$b['#text']??'',
+        'href'=>$c['href']??'',
+        'target'=>$c['target']??''
       ]));
     }elseif($block->name==='morpheus/cardnews')
       $block->props=$this->parseAcfBlock($blockOriginal,['Morpheus\blocks\cardnews\CardNews','parseBlock']);
