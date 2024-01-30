@@ -59,7 +59,6 @@ class ContentBlocks{
         'href'=>$c['href'],
         'target'=>$c['target']
       ]));
-      file_put_contents("blockLog.txt","\n\n".json_encode($block,JSON_PRETTY_PRINT),FILE_APPEND|LOCK_EX);
     }elseif($block->name==='morpheus/cardnews')
       $block->props=$this->parseAcfBlock($blockOriginal,['Morpheus\blocks\cardnews\CardNews','parseBlock']);
     $this->blockRemoveContent($block);
