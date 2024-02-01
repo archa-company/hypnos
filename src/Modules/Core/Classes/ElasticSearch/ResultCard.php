@@ -9,6 +9,7 @@ class ResultCard
     public $hat;
     public $citySign;
     public $postLayout;
+    public $advertisingNews;
     public $title;
     public $image;
     public $link;

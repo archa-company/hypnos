@@ -18,6 +18,7 @@ class ModelMorpheus extends AbstractModel
         $result->hat = $this->post->hat;
         $result->citySign = $this->post->citySign;
         $result->postLayout = $this->post->postLayout;
+        $result->advertisingNews = $this->post->advertisingNews;
         $result->title = $this->post->title;
         $result->image = $this->post->thumbnail;
         $result->link = $this->post->uri;
