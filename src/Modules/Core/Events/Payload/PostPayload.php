@@ -50,6 +50,7 @@ class PostPayload implements Exportable
                 'uri'               => Helper::getRelativePermalink($this->post->ID),
                 'description'       => $this->post->post_excerpt,
                 'thumbnail'         => get_the_post_thumbnail_url($this->post->ID, 'full'),
+                'thumbnailMeta'     => $this->getThumbnailMeta(),
                 'createdAt'         => date('c', strtotime($this->post->post_date)),
                 'updatedAt'         => date('c', strtotime($this->post->post_modified)),
                 'seo'               => $seo->getData(),
@@ -65,5 +66,14 @@ class PostPayload implements Exportable
         }
 
         return $result;
+    }
+
+    private function getThumbnailMeta()
+    {
+        $thumbnailId = get_post_thumbnail_id($this->post->ID);
+        return [
+            'caption'           => get_the_post_thumbnail_caption($this->post->ID),
+            'credit'            => get_post_meta($thumbnailId, 'image_credit', true),
+        ];
     }
 }
