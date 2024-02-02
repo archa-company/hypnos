@@ -7,4 +7,5 @@ return [
     'cleaning'              => 'Morpheus\Modules\Cleaning\Module',
     'importer'              => 'Morpheus\Modules\Importer\Module',
     // 'cdn'                   => 'Morpheus\Modules\CDN\Module',
+    'push'                  => 'Morpheus\Modules\PushNotification\Module',
 ];

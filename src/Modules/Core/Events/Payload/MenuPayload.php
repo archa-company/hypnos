@@ -91,7 +91,7 @@ class MenuPayload implements Exportable
 
     private function addItem(string $menuSlug, stdClass $item): void
     {
-        if ($item->parent) $this->addSubItem($menuSlug, $item);
+        if ($item->parent) return $this->addSubItem($menuSlug, $item);
         $this->menus[$menuSlug][$item->id] = $item;
     }
 

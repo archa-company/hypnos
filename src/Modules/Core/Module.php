@@ -10,7 +10,8 @@ use Morpheus\Modules\Core\Classes\ElasticSearch\ElasticSearch;
 use Morpheus\Modules\Core\Classes\Rest;
 use Morpheus\Modules\Core\Classes\Tags;
 use Morpheus\Modules\Core\Classes\ThemeSupports;
-use Morpheus\Modules\Core\Hooks\CategoryOnSave;
+use Morpheus\Modules\Core\Hooks\AdminHomeLink;
+use Morpheus\Modules\Core\Hooks\AdminPostLink;
 use Morpheus\Modules\Core\Hooks\ConfigOnSave;
 use Morpheus\Modules\Core\Hooks\RegisterConfigPage;
 use Morpheus\Modules\Core\Hooks\RenderAdminBar;
@@ -33,17 +34,25 @@ class Module implements ModuleInterface
         AmpAnalytics::factory()->init();
         AmpAds::factory()->init();
 
+        // $this->addAction('wp_after_insert_post',            new PostOnSave, 9999990, 3, true);
         $this->addAction('save_post_post',                  new PostOnSave, 9999990, 3, true);
         $this->addAction('save_post_page',                  new PostOnSave, 9999990, 3, true);
         $this->addAction('post_updated',                    new PostUpdated, 9999991, 3, true);
         $this->addAction('post_updated',                    new PostRemoved, 9999992, 3, true);
         $this->addAction('save_post_nav_menu_item',         new MenuOnSave, 9999990, 3);
-        $this->addAction('acf/save_post',                   new ConfigOnSave, 9999990);
         $this->addAction('saved_nav_menu',                  new MenuOnSave, 9999993, 3);
         $this->addAction('saved_term',                      new TermOnSave, 9999993, 5);
+        $this->addAction('acf/save_post',                   new ConfigOnSave, 9999990);
 
         $this->addAction('acf/init',                        new RegisterConfigPage);
         $this->addAction('wp_before_admin_bar_render',      new RenderAdminBar);
+
+        $this->addFilter('preview_post_link',               new AdminPostLink, 10, 2);
+        $this->addFilter('post_type_link',                  new AdminPostLink, 10, 2);
+        $this->addFilter('post_link',                       new AdminPostLink, 10, 2);
+        $this->addFilter('preview_post_link',               new AdminHomeLink, 10, 2);
+        $this->addFilter('post_type_link',                  new AdminHomeLink, 10, 2);
+        $this->addFilter('post_link',                       new AdminHomeLink, 10, 2);
 
         $this->addFilter('wp_sitemaps_enabled',             '__return_false');
         $this->addFilter('wpseo_json_ld_output',            '__return_false');

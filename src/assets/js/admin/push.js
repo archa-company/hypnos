@@ -1,4 +1,4 @@
-const TrbMessageForm = ({
+const MorpheusMessageForm = ({
   showNotices,
   titleField,
   titleValidate,
@@ -85,7 +85,7 @@ const TrbMessageForm = ({
     };
     try {
       const response = await apiFetch({
-        path: "/tribuna/v1/push-message",
+        path: "/morpheus/v1/push-message",
         method: "POST",
         data: sendData,
       });
@@ -280,7 +280,7 @@ const TrbMessageForm = ({
   );
 };
 
-const TrbMessageComponent = wp.compose.compose(
+const MorpheusMessageComponent = wp.compose.compose(
   wp.compose.withState({
     showNotices: null,
     titleField: "",
@@ -319,9 +319,9 @@ const TrbMessageComponent = wp.compose.compose(
           : "validate__warning",
     };
   })
-)(TrbMessageForm);
+)(MorpheusMessageForm);
 
 ReactDOM.render(
-  wp.element.createElement(TrbMessageComponent),
-  document.getElementById("TribunaPushMessageWidget")
+  wp.element.createElement(MorpheusMessageComponent),
+  document.getElementById("MorpheusPushMessageWidget")
 );

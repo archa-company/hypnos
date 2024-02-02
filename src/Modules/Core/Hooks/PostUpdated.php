@@ -20,6 +20,7 @@ class PostUpdated implements Actionable
          */
         [$postId, $post, $postOld] = $params;
 
+        if (!in_array($post->post_type, ['post', 'page'])) return;
         if (!in_array($post->post_status, ['publish'])) return;
         if (!in_array($postOld->post_status, ['publish'])) return;
         if (Helper::preventTwiceHook(__CLASS__, $postId)) return;

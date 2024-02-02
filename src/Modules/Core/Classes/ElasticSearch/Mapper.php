@@ -2,8 +2,12 @@
 
 namespace Morpheus\Modules\Core\Classes\ElasticSearch;
 
+use Morpheus\Shared\Traits\UseConfig;
+
 class Mapper
 {
+    use UseConfig;
+
     private string $model;
     private array $hits;
     private array $result = [];
@@ -21,10 +25,11 @@ class Mapper
 
     public function process()
     {
+        $baseUrl = $this->getConfig('domain_oficial');
         foreach ($this->hits as $hit) {
             $post = $hit->_source;
             // dd($post);
-            array_push($this->result, $this->model::factory($post)->execute());
+            array_push($this->result, $this->model::factory($post, $baseUrl)->execute());
         }
         return $this;
     }

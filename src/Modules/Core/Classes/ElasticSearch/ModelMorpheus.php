@@ -5,9 +5,9 @@ namespace Morpheus\Modules\Core\Classes\ElasticSearch;
 class ModelMorpheus extends AbstractModel
 {
 
-    public static function factory($post)
+    public static function factory($post, string $baseUrl = null)
     {
-        return new self($post);
+        return new self($post, $baseUrl);
     }
 
     public function execute()
@@ -16,12 +16,9 @@ class ModelMorpheus extends AbstractModel
         $result->id = (int) $this->post->externalId;
         $result->site = $this->post->site;
         $result->hat = $this->post->hat;
-        $result->citySign = $this->post->citySign;
-        $result->postLayout = $this->post->postLayout;
-        $result->advertisingNews = $this->post->advertisingNews;
         $result->title = $this->post->title;
         $result->image = $this->post->thumbnail;
-        $result->link = $this->post->uri;
+        $result->link = "https://{$this->baseUrl}{$this->post->uri}";
         $result->type = $this->post->type;
         $result->uuid = $this->post->uuid;
         $result->createdAt = $this->post->createdAt;
