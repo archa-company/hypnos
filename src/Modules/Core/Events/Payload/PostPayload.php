@@ -46,6 +46,7 @@ class PostPayload implements Exportable
                 'citySign'          => get_post_meta($this->post->ID, 'citySign', true),
                 'postLayout'        => get_post_meta($this->post->ID, 'postLayout', true),
                 'advertisingNews'   => !!get_post_meta($this->post->ID, 'advertisingNews', true),
+                'lastPosts'         => !get_post_meta($this->post->ID, 'lastPosts', true),
                 'title'             => $this->post->post_title,
                 'uri'               => Helper::getRelativePermalink($this->post->ID),
                 'description'       => $this->post->post_excerpt,

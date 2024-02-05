@@ -16,6 +16,10 @@ class ModelMorpheus extends AbstractModel
         $result->id = (int) $this->post->externalId;
         $result->site = $this->post->site;
         $result->hat = $this->post->hat;
+        $result->citySign = $this->post->citySign;
+        $result->postLayout = $this->post->postLayout;
+        $result->advertisingNews = $this->post->advertisingNews;
+        $result->lastPosts = $this->post->lastPosts;
         $result->title = $this->post->title;
         $result->image = $this->post->thumbnail;
         $result->link = "https://{$this->baseUrl}{$this->post->uri}";
