@@ -185,6 +185,26 @@
             ]
         },
         {
+            "key": "field_65c1307f9d606",
+            "label": "Categoria publicitária",
+            "name": "is_advertising_category",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_64d12e1f2e82c",
             "label": "Conteúdo Publicitário",
             "name": "",
@@ -192,7 +212,15 @@
             "type": "accordion",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65c1307f9d606",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -228,11 +256,11 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_64d138882e831",
+            "key": "field_65c11a7d1fc1c",
             "label": "Banner",
             "name": "banner",
             "aria-label": "",
-            "type": "image",
+            "type": "gallery",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -243,6 +271,8 @@
             },
             "return_format": "url",
             "library": "all",
+            "min": "",
+            "max": "",
             "min_width": "",
             "min_height": "",
             "min_size": "",
@@ -250,6 +280,7 @@
             "max_height": "",
             "max_size": "",
             "mime_types": "",
+            "insert": "append",
             "preview_size": "medium"
         },
         {
@@ -328,7 +359,10 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "parent_repeater": "field_64d1379b2e82e"
+                    "parent_repeater": "field_64d1379b2e82e",
+                    "maxlength": "",
+                    "prepend": "",
+                    "append": ""
                 },
                 {
                     "key": "field_64d1382c2e830",
