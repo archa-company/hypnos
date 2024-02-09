@@ -53,7 +53,7 @@ class ContentBlocks{
       $a=$this->getAttributes($block->content,'img');
       $b=$this->getAttributes($block->content,'figcaption');
       $c=$this->getAttributes($block->content,'a');
-      $f=$this->getAttachmentByUrl($a['src']);
+      $f=$this->getAttachmentByUrl(preg_replace("/https?:\/\/[^\/]+/","",$a['src']));
       $block->props=array_merge($block->props,array_filter([
         'source'=>$a['src']??'',
         'alt'=>$a['alt']??'',
