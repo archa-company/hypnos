@@ -57,7 +57,7 @@ class ContentBlocks{
       $block->props=array_merge($block->props,array_filter([
         'source'=>$a['src']??'',
         'alt'=>$a['alt']??'',
-        'credit'=>$f,
+        'credit'=>$f['credit']??'',
         'caption'=>$b['#text']??'',
         'href'=>$c['href']??'',
         'target'=>$c['target']??''
@@ -99,17 +99,6 @@ class ContentBlocks{
     unset($b->innerBlocks);
     if(!empty($b->innerHTML))$b->content=preg_replace('/\n/','$1',$b->innerHTML);
     unset($b->innerHTML);
-    if(preg_match('/^morpheus\//',$b->name)){
-      unset($b->props['id']);
-      unset($b->props['name']);
-      if(!empty($b->props['data'])){
-        $data=$b->props['data'];
-        $data=array_filter($data,function($item){return !((bool)preg_match('/^field_/',$item));});
-        $b->props=array_merge($b->props,$data);
-        unset($b->props['data']);
-      }
-      if(!empty($b->props['mode']))unset($b->props['mode']);
-    }
     return $b;
   }
   public function getBlocks(string $content):array{
