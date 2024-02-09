@@ -57,13 +57,12 @@ class ContentBlocks{
       $block->props=array_merge($block->props,array_filter([
         'source'=>$a['src']??'',
         'alt'=>$a['alt']??'',
-        'credit'=>$f['credit']??'',
+        'credit'=>$f,
         'caption'=>$b['#text']??'',
         'href'=>$c['href']??'',
         'target'=>$c['target']??''
       ]));
-    }elseif($block->name==='morpheus/cardnews')
-      $block->props=$this->parseAcfBlock($blockOriginal,['Morpheus\blocks\cardnews\CardNews','parseBlock']);
+    }
     $this->blockRemoveContent($block);
     return apply_filters('morpheus_parse_block',$block,$blockOriginal);
   }
@@ -115,14 +114,6 @@ class ContentBlocks{
   }
   public function getBlocks(string $content):array{
     return $this->parseBlocks(parse_blocks($content));
-  }
-  public function parseAcfBlock(array $block,callable $callback){
-    $block=$block['attrs'];
-    $block['id']=acf_ensure_block_id_prefix(acf_get_block_id($block));
-    acf_setup_meta($block['data'],$block['id'],true);
-    $r=call_user_func($callback);
-    acf_reset_meta($block['id']);
-    return $r;
   }
   public static function factory(){return new ContentBlocks();}
 }
